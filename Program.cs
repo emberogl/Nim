@@ -195,7 +195,7 @@
             }
         }
 
-        // AI to make the move by considering nims sum by getting desired sticks by exponent
+        // AI to make the move by considering the nim sum value (if not 0 then winning configuration), so find the desired sticks in each row by performing XOR with the nim sum
         static void PCMove()
         {
             int NimSum = CalculateNimSum();
