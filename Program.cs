@@ -196,6 +196,8 @@
         }
 
         // AI to make the move by considering the nim sum value (if not 0 then winning configuration), so find the desired sticks in each row by performing XOR with the nim sum
+        // (Let's say we're at row 2 with 5 sticks left, and the nim sum is 2, so the operation would be 5 XOR 2 = 7, which is greater than the number of sticks in the row, so we skip this iteration)
+        // (Moving onto the next iteration at row 3 with 7 sticks, the operation is 7 XOR 2 = 5, so we can remove 2 from row 3 to leave 5 sticks)
         static void PCMove()
         {
             int NimSum = CalculateNimSum();
